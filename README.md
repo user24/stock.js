@@ -1,7 +1,7 @@
 stock.js
 ========
 
-Downloads images from jpg.to
+Downloads images from http://jpg.to
 
 Usage: node getjpgs.js keyword [num=50]
 
