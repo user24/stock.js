@@ -3,10 +3,10 @@ stock.js
 
 Downloads images from http://jpg.to
 
-Usage: node getjpgs.js keyword [num=50]
+Usage: node stock.js keyword [num=50]
 
 Example:
 
-node getjpgs.js keyboard 20
+node stock.js keyboard 20
 
 Fetches 20 keyboard images.
