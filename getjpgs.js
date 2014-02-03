@@ -20,7 +20,7 @@ function saveFile(src, file_name) {
 
     //console.log("downloading " + src + " to " + file_name);
     
-    file = fs.createWriteStream("/Users/howardyeend/Sites/journal/data/downloads/" + file_name);
+    file = fs.createWriteStream("./downloads/" + file_name);
 
     options = {
         host: url.parse(src).host,
