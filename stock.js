@@ -7,7 +7,7 @@ var url = require('url');
 
 var num = process.argv[3] || 50;
 var keyword = process.argv[2];
-var i = 0;
+var i = 1;
 
 var rateLimitMS = 500;
 
@@ -18,7 +18,7 @@ function saveFile(src, file_name) {
         file_name = url.parse(src).pathname.split('/').pop();
     }
 
-    //console.log("downloading " + src + " to " + file_name);
+    console.log("downloading " + src + " to " + file_name);
     
     file = fs.createWriteStream("./downloads/" + file_name);
 
@@ -63,9 +63,9 @@ function fetchAnother() {
         });
         res.on('end', function () {
             var src = html.substring(html.indexOf(' src="') + 6, html.indexOf('" />'));
-            saveFile(src, keyword + (i + 1) + ".jpg");
+            saveFile(src, keyword + i + ".jpg");
+            i += 1;
             if (i <= num) {
-                i += 1;
                 setTimeout(fetchAnother, rateLimitMS);
             } else {
                 console.log("done");
