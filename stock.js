@@ -38,6 +38,7 @@ function saveFile(src, file_name) {
 }
 
 if (process.argv.length < 3) {
+    console.log("Stock.js: https://github.com/user24/stock.js");
     console.log("Downloads images from jpg.to");
     console.log("Usage: " + process.argv[0] + " " + url.parse(process.argv[1]).pathname.split('/').pop() + " keyword [num=50]");
     process.exit();
